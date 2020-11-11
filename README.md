@@ -96,6 +96,7 @@ You can easily disable the module by giving it a value of `false`
 ```js
 {
   postcssEachVariables: true; // default: false
+  scope: ':root'; // default: ':root' – options to use a custom local variable scope
 }
 ```
 

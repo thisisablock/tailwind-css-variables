@@ -26,6 +26,7 @@ module.exports = function(customVariableName, opts) {
     };
     const options = {
       postcssEachVariables: false,
+      scope: ':root',
       ...opts
     };
     let rootArray = {};
@@ -92,7 +93,7 @@ module.exports = function(customVariableName, opts) {
       }
     });
     let root = {
-      ':root': rootArray
+      [options.scope]: rootArray
     };
     addComponents(root);
   };
